@@ -12,6 +12,13 @@
 		ACE39CB11D74EDB9003971F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CAF1D74EDB9003971F2 /* Main.storyboard */; };
 		ACE39CB31D74EDB9003971F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CB21D74EDB9003971F2 /* Assets.xcassets */; };
 		ACE39CB61D74EDB9003971F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CB41D74EDB9003971F2 /* LaunchScreen.storyboard */; };
+		ACE39CBE1D75040A003971F2 /* Australia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CBD1D75040A003971F2 /* Australia.mp3 */; };
+		ACE39CC51D75041A003971F2 /* Bajito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CBF1D75041A003971F2 /* Bajito.mp3 */; };
+		ACE39CC61D75041A003971F2 /* Cold Water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CC01D75041A003971F2 /* Cold Water.mp3 */; };
+		ACE39CC71D75041A003971F2 /* Ella.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CC11D75041A003971F2 /* Ella.mp3 */; };
+		ACE39CC81D75041A003971F2 /* Island in the Sun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CC21D75041A003971F2 /* Island in the Sun.mp3 */; };
+		ACE39CC91D75041A003971F2 /* Otra vez.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CC31D75041A003971F2 /* Otra vez.mp3 */; };
+		ACE39CCA1D75041A003971F2 /* Quemando Amor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CC41D75041A003971F2 /* Quemando Amor.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		ACE39CB21D74EDB9003971F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE39CB51D74EDB9003971F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE39CB71D74EDB9003971F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE39CBD1D75040A003971F2 /* Australia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Australia.mp3; sourceTree = "<group>"; };
+		ACE39CBF1D75041A003971F2 /* Bajito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bajito.mp3; sourceTree = "<group>"; };
+		ACE39CC01D75041A003971F2 /* Cold Water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cold Water.mp3"; sourceTree = "<group>"; };
+		ACE39CC11D75041A003971F2 /* Ella.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ella.mp3; sourceTree = "<group>"; };
+		ACE39CC21D75041A003971F2 /* Island in the Sun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Island in the Sun.mp3"; sourceTree = "<group>"; };
+		ACE39CC31D75041A003971F2 /* Otra vez.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Otra vez.mp3"; sourceTree = "<group>"; };
+		ACE39CC41D75041A003971F2 /* Quemando Amor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quemando Amor.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,13 @@
 		ACE39CAA1D74EDB9003971F2 /* ReproductorMusica */ = {
 			isa = PBXGroup;
 			children = (
+				ACE39CBF1D75041A003971F2 /* Bajito.mp3 */,
+				ACE39CC01D75041A003971F2 /* Cold Water.mp3 */,
+				ACE39CC11D75041A003971F2 /* Ella.mp3 */,
+				ACE39CC21D75041A003971F2 /* Island in the Sun.mp3 */,
+				ACE39CC31D75041A003971F2 /* Otra vez.mp3 */,
+				ACE39CC41D75041A003971F2 /* Quemando Amor.mp3 */,
+				ACE39CBD1D75040A003971F2 /* Australia.mp3 */,
 				ACE39CAB1D74EDB9003971F2 /* AppDelegate.swift */,
 				ACE39CAD1D74EDB9003971F2 /* ViewController.swift */,
 				ACE39CAF1D74EDB9003971F2 /* Main.storyboard */,
@@ -122,9 +143,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE39CC71D75041A003971F2 /* Ella.mp3 in Resources */,
 				ACE39CB61D74EDB9003971F2 /* LaunchScreen.storyboard in Resources */,
+				ACE39CBE1D75040A003971F2 /* Australia.mp3 in Resources */,
 				ACE39CB31D74EDB9003971F2 /* Assets.xcassets in Resources */,
+				ACE39CC81D75041A003971F2 /* Island in the Sun.mp3 in Resources */,
+				ACE39CC51D75041A003971F2 /* Bajito.mp3 in Resources */,
 				ACE39CB11D74EDB9003971F2 /* Main.storyboard in Resources */,
+				ACE39CC91D75041A003971F2 /* Otra vez.mp3 in Resources */,
+				ACE39CCA1D75041A003971F2 /* Quemando Amor.mp3 in Resources */,
+				ACE39CC61D75041A003971F2 /* Cold Water.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
