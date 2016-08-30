@@ -12,9 +12,9 @@ import AVFoundation
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     let songs = ["Ella", "Bajito", "Otra vez", "Australia", "Cold Water", "Island in the Sun", "Quemando Amor"]
+    
     var songItem :String?
-    
-    
+    var player: AVAudioPlayer!
     
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
@@ -22,25 +22,35 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var songSelector: UIPickerView!
     
+    @IBOutlet weak var optionShuffle: UILabel!
+    @IBOutlet weak var sliderVolume: UISlider!
+    
     @IBAction func playButton() {
-        songTitle.text = songItem!
-        songState.text = "Now Playing"
+        if !player.playing{
+            songTitle.text = songItem!
+            songState.text = "Now Playing"
+            player.play()
+        }
     }
     
     @IBAction func pauseButton() {
-        songTitle.text = songItem!
-        songState.text = "Paused"
+        if player.playing{
+            songTitle.text = songItem!
+            songState.text = "Paused"
+            player.pause()
+        }
+        
     }
     
     @IBAction func stopButton() {
-        songTitle.text = songItem!
-        songState.text = "Stopped"
+        if player.playing{
+            player.stop()
+            player.currentTime = 0.0
+            songTitle.text = songItem!
+            songState.text = "Stopped"
+        }
+        
     }
-    
-    
-    @IBOutlet weak var optionShuffle: UILabel!
-    
-    @IBOutlet weak var sliderVolume: UISlider!
     
     
     override func viewDidLoad() {
@@ -49,6 +59,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         songSelector.dataSource = self
         songSelector.selectRow(1, inComponent: 0, animated: false)
         songItem = songs[1]
+        
+        let songUrl = NSBundle.mainBundle().URLForResource(songItem, withExtension:"mp3")
+        do{
+            try player = AVAudioPlayer(contentsOfURL: songUrl!)
+        }catch{
+            print("Error Init")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -66,6 +83,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         songItem = songs[songSelector.selectedRowInComponent(0)]
+        let songUrl = NSBundle.mainBundle().URLForResource(songItem!, withExtension:"mp3")
+        do{
+            try player = AVAudioPlayer(contentsOfURL: songUrl!)
+        }catch{
+            print("Error Load Song Picker Interaction")
+        }
     }
 
 
