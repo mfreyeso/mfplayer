@@ -24,10 +24,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var optionShuffle: UILabel!
     @IBOutlet weak var sliderVolume: UISlider!
+
+    @IBAction func actionVolume(sender: UISlider) {
+        if player.playing{
+            player.volume = sender.value
+        }
+    }
     
     @IBAction func playButton() {
         if !player.playing{
-            songTitle.text = songItem!
             songState.text = "Now Playing"
             player.play()
         }
@@ -35,10 +40,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func pauseButton() {
         if player.playing{
-            songTitle.text = songItem!
             songState.text = "Paused"
             player.pause()
+        }else{
+            player.play()
+            songState.text = "Now Playing"
         }
+        
         
     }
     
@@ -46,7 +54,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if player.playing{
             player.stop()
             player.currentTime = 0.0
-            songTitle.text = songItem!
             songState.text = "Stopped"
         }
         
@@ -59,6 +66,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         songSelector.dataSource = self
         songSelector.selectRow(1, inComponent: 0, animated: false)
         songItem = songs[1]
+        songTitle.text = songItem
         
         let songUrl = NSBundle.mainBundle().URLForResource(songItem, withExtension:"mp3")
         do{
@@ -83,6 +91,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         songItem = songs[songSelector.selectedRowInComponent(0)]
+        songTitle.text = songItem
+        if player.playing{
+            songState.text = ""
+        }
         let songUrl = NSBundle.mainBundle().URLForResource(songItem!, withExtension:"mp3")
         do{
             try player = AVAudioPlayer(contentsOfURL: songUrl!)

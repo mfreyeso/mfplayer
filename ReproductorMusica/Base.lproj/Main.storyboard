@@ -25,6 +25,9 @@
                             </pickerView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MUv-I1-RwF">
                                 <rect key="frame" x="226" y="519" width="118" height="31"/>
+                                <connections>
+                                    <action selector="actionVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="iK1-Qs-TuB"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4u-Li-bQJ">
                                 <rect key="frame" x="74" y="434" width="30" height="30"/>
