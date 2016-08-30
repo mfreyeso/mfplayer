@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC06C59F1D75F2FE00AEFF8F /* Bajito.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C5981D75F2FE00AEFF8F /* Bajito.png */; };
+		AC06C5A01D75F2FE00AEFF8F /* Australia.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C5991D75F2FE00AEFF8F /* Australia.png */; };
+		AC06C5A11D75F2FE00AEFF8F /* Otra vez.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C59A1D75F2FE00AEFF8F /* Otra vez.png */; };
+		AC06C5A21D75F2FE00AEFF8F /* Ella.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C59B1D75F2FE00AEFF8F /* Ella.png */; };
+		AC06C5A31D75F2FE00AEFF8F /* Island in the Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C59C1D75F2FE00AEFF8F /* Island in the Sun.png */; };
+		AC06C5A41D75F2FE00AEFF8F /* Cold Water.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C59D1D75F2FE00AEFF8F /* Cold Water.png */; };
+		AC06C5A51D75F2FE00AEFF8F /* Quemando Amor.png in Resources */ = {isa = PBXBuildFile; fileRef = AC06C59E1D75F2FE00AEFF8F /* Quemando Amor.png */; };
 		ACE39CAC1D74EDB9003971F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE39CAB1D74EDB9003971F2 /* AppDelegate.swift */; };
 		ACE39CAE1D74EDB9003971F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE39CAD1D74EDB9003971F2 /* ViewController.swift */; };
 		ACE39CB11D74EDB9003971F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE39CAF1D74EDB9003971F2 /* Main.storyboard */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC06C5981D75F2FE00AEFF8F /* Bajito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bajito.png; sourceTree = "<group>"; };
+		AC06C5991D75F2FE00AEFF8F /* Australia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Australia.png; sourceTree = "<group>"; };
+		AC06C59A1D75F2FE00AEFF8F /* Otra vez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Otra vez.png"; sourceTree = "<group>"; };
+		AC06C59B1D75F2FE00AEFF8F /* Ella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ella.png; sourceTree = "<group>"; };
+		AC06C59C1D75F2FE00AEFF8F /* Island in the Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Island in the Sun.png"; sourceTree = "<group>"; };
+		AC06C59D1D75F2FE00AEFF8F /* Cold Water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cold Water.png"; sourceTree = "<group>"; };
+		AC06C59E1D75F2FE00AEFF8F /* Quemando Amor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quemando Amor.png"; sourceTree = "<group>"; };
 		ACE39CA81D74EDB9003971F2 /* ReproductorMusica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReproductorMusica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE39CAB1D74EDB9003971F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE39CAD1D74EDB9003971F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +82,13 @@
 		ACE39CAA1D74EDB9003971F2 /* ReproductorMusica */ = {
 			isa = PBXGroup;
 			children = (
+				AC06C5981D75F2FE00AEFF8F /* Bajito.png */,
+				AC06C5991D75F2FE00AEFF8F /* Australia.png */,
+				AC06C59A1D75F2FE00AEFF8F /* Otra vez.png */,
+				AC06C59B1D75F2FE00AEFF8F /* Ella.png */,
+				AC06C59C1D75F2FE00AEFF8F /* Island in the Sun.png */,
+				AC06C59D1D75F2FE00AEFF8F /* Cold Water.png */,
+				AC06C59E1D75F2FE00AEFF8F /* Quemando Amor.png */,
 				ACE39CBF1D75041A003971F2 /* Bajito.mp3 */,
 				ACE39CC01D75041A003971F2 /* Cold Water.mp3 */,
 				ACE39CC11D75041A003971F2 /* Ella.mp3 */,
@@ -144,13 +165,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE39CC71D75041A003971F2 /* Ella.mp3 in Resources */,
+				AC06C5A11D75F2FE00AEFF8F /* Otra vez.png in Resources */,
 				ACE39CB61D74EDB9003971F2 /* LaunchScreen.storyboard in Resources */,
+				AC06C5A01D75F2FE00AEFF8F /* Australia.png in Resources */,
 				ACE39CBE1D75040A003971F2 /* Australia.mp3 in Resources */,
+				AC06C5A31D75F2FE00AEFF8F /* Island in the Sun.png in Resources */,
+				AC06C5A41D75F2FE00AEFF8F /* Cold Water.png in Resources */,
 				ACE39CB31D74EDB9003971F2 /* Assets.xcassets in Resources */,
+				AC06C59F1D75F2FE00AEFF8F /* Bajito.png in Resources */,
 				ACE39CC81D75041A003971F2 /* Island in the Sun.mp3 in Resources */,
 				ACE39CC51D75041A003971F2 /* Bajito.mp3 in Resources */,
 				ACE39CB11D74EDB9003971F2 /* Main.storyboard in Resources */,
+				AC06C5A51D75F2FE00AEFF8F /* Quemando Amor.png in Resources */,
 				ACE39CC91D75041A003971F2 /* Otra vez.mp3 in Resources */,
+				AC06C5A21D75F2FE00AEFF8F /* Ella.png in Resources */,
 				ACE39CCA1D75041A003971F2 /* Quemando Amor.mp3 in Resources */,
 				ACE39CC61D75041A003971F2 /* Cold Water.mp3 in Resources */,
 			);
@@ -312,6 +340,7 @@
 				ACE39CBC1D74EDB9003971F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

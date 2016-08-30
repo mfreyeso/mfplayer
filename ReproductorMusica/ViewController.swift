@@ -33,9 +33,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let randomSongIndex = Int(arc4random_uniform(UInt32(self.songs.count - 1)))
             songSelector.selectRow(randomSongIndex, inComponent: 0, animated: false)
             songItem = self.songs[randomSongIndex]
+            
             connectSong(songItem!)
+            
+            loadCover(songItem!)
             songTitle.text = songItem
-            songState.text = ""
+            songState.text = "Now Playing"
+            player.play()
         }
     }
     
@@ -57,9 +61,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if player.playing{
             songState.text = "Paused"
             player.pause()
-        }else{
-            player.play()
-            songState.text = "Now Playing"
         }
     }
     
@@ -78,9 +79,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         songSelector.dataSource = self
         songSelector.selectRow(1, inComponent: 0, animated: false)
         songItem = songs[1]
-        songTitle.text = songItem
         
         connectSong(songItem!)
+        loadCover(songItem!)
+        songTitle.text = songItem
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -97,11 +99,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         songItem = songs[songSelector.selectedRowInComponent(0)]
-        songTitle.text = songItem
-        if player.playing{
-            songState.text = ""
-        }
         connectSong(songItem!)
+        loadCover(songItem!)
+        songTitle.text = songItem
+        songState.text = "Now Playing"
+        player.play()
+        
     }
     
     func connectSong(songItem: String){
@@ -110,8 +113,20 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             try player = AVAudioPlayer(contentsOfURL: songUrl!)
         }catch{
             print("Error Connect to Song")
+            let alertController = UIAlertController(title: "Error", message: "Problems in connection for your song", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
         }
         
+    }
+    
+    func loadCover(songItem:String){
+        let labelImage = songItem + ".png"
+        let image = UIImage(named: labelImage);
+        songImage.image = image;
     }
 
 
