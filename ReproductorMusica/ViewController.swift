@@ -25,6 +25,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var optionShuffle: UILabel!
     @IBOutlet weak var sliderVolume: UISlider!
 
+    
+    @IBOutlet weak var switchShuffle: UISwitch!
+    
+    @IBAction func buttonShuffle(sender: UISwitch) {
+        if switchShuffle.on{
+            let randomSongIndex = Int(arc4random_uniform(UInt32(self.songs.count - 1)))
+            songSelector.selectRow(randomSongIndex, inComponent: 0, animated: false)
+            songItem = self.songs[randomSongIndex]
+            connectSong(songItem!)
+            songTitle.text = songItem
+            songState.text = ""
+        }
+    }
+    
+    
     @IBAction func actionVolume(sender: UISlider) {
         if player.playing{
             player.volume = sender.value
@@ -46,8 +61,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             player.play()
             songState.text = "Now Playing"
         }
-        
-        
     }
     
     @IBAction func stopButton() {
@@ -59,7 +72,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         songSelector.delegate = self
@@ -68,13 +80,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         songItem = songs[1]
         songTitle.text = songItem
         
-        let songUrl = NSBundle.mainBundle().URLForResource(songItem, withExtension:"mp3")
-        do{
-            try player = AVAudioPlayer(contentsOfURL: songUrl!)
-        }catch{
-            print("Error Init")
-        }
-        // Do any additional setup after loading the view, typically from a nib.
+        connectSong(songItem!)
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -95,12 +101,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if player.playing{
             songState.text = ""
         }
-        let songUrl = NSBundle.mainBundle().URLForResource(songItem!, withExtension:"mp3")
+        connectSong(songItem!)
+    }
+    
+    func connectSong(songItem: String){
+        let songUrl = NSBundle.mainBundle().URLForResource(songItem, withExtension:"mp3")
         do{
             try player = AVAudioPlayer(contentsOfURL: songUrl!)
         }catch{
-            print("Error Load Song Picker Interaction")
+            print("Error Connect to Song")
         }
+        
     }
 
 

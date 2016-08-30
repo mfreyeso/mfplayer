@@ -52,6 +52,9 @@
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D1C-Df-gfQ">
                                 <rect key="frame" x="20" y="518" width="51" height="31"/>
+                                <connections>
+                                    <action selector="buttonShuffle:" destination="BYZ-38-t0r" eventType="valueChanged" id="N0M-xa-DGE"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shuffle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-Va-lrw">
                                 <rect key="frame" x="77" y="523" width="55" height="21"/>
@@ -131,6 +134,7 @@
                         <outlet property="songSelector" destination="i7F-DU-tXD" id="2Mk-Ls-TgX"/>
                         <outlet property="songState" destination="gKr-wi-grB" id="SP1-fy-OcK"/>
                         <outlet property="songTitle" destination="LcK-ra-OB4" id="xwY-kF-PWd"/>
+                        <outlet property="switchShuffle" destination="D1C-Df-gfQ" id="cHY-rR-nt0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
